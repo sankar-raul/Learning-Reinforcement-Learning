@@ -10,7 +10,9 @@ def policy(state, explore=0.0):
         action = np.random.randint(low=0, high=4)
     return action
 
+# q_table = pkl.load(open("sarsa_q_table.pkl", "rb"))
 q_table = pkl.load(open("q_learning_q_table.pkl", "rb"))
+
 
 done = False
 state = cliffEnv.reset()[0]

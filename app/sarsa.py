@@ -1,7 +1,7 @@
 import gymnasium as gym
 import numpy as np
 import pickle as pkl
-cliffEnv = gym.make("CliffWalking-v1", render_mode="ansi")
+cliffEnv = gym.make("CliffWalking-v1", render_mode="human")
 
 q_table = np.zeros(shape=(48, 4))
 

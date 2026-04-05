@@ -1,7 +1,7 @@
 import gymnasium as gym
 import numpy as np
 import pickle as pkl
-cliffEnv = gym.make("CliffWalking-v1", render_mode="ansi")
+cliffEnv = gym.make("CliffWalking-v1", render_mode="human")
 
 q_table = np.zeros(shape=(48, 4))
 
@@ -15,7 +15,7 @@ def policy(state, explore=0.0):
 ALPHA = 0.1
 GAMMA = 0.9
 NUM_EPISODES = 500
-cliffEnv.metadata["render_fps"] = 120
+cliffEnv.metadata["render_fps"] = 30
 max_reward = -np.inf
 max_state = None
 for ep in range(NUM_EPISODES):
